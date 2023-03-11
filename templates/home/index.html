@@ -1,0 +1,16 @@
+{% extends "/base/base.html" %}
+ 
+{% block title %} 
+    Hello page | {{ super() }}
+{% endblock %}
+
+{% block content %} 
+    <h1>Hello from {{name}}!</h1>
+{% endblock %}
+
+{% block scripts %} 
+    <script src='/static/js/scripts.js'></script>
+{% endblock %}
+
+ <!-- if in templates folder it will automatically be renderred as a view. -->
+

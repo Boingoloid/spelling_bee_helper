@@ -1,0 +1,26 @@
+{% extends "/base/base.html" %}
+ 
+{% block title %} 
+    Form page | {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="enter-name">
+        <div clsas="grid-100">
+        </div>
+        <div class="grid-100">
+            <form action="{{ url_for('save') }}" method="POST">
+                <label> Name your bear: </label>
+                <input type="text" name="name" value="{{ name }}" autofocus>
+                <input type="submit" value="Let's build it!">
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %} 
+
+{% endblock %}
+
+ <!-- if in templates folder it will automatically be renderred as a view. -->
+

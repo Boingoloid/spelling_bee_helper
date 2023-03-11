@@ -1,0 +1,17 @@
+body {
+    background: beige;
+    color: black;
+}
+
+
+/* input[type=text] {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: linear-gradient(to left, #ccc 1px, transparent 0);
+  background-size: 18px 1px;
+  width: 321px; 
+  font: 12px monaco, monospace; 
+  letter-spacing: 10.5px;
+  text-indent: 5px;
+  text-transform: uppercase;
+} */

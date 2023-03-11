@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            {% block title %} 
+                Flask Template
+            {% endblock %}
+        </title>
+        <link rel='stylesheet' href='/static/css/base.css'>
+    </head>
+        <body>
+            {% block content %} 
+            {% endblock %}
+            {% block scripts %} {% endblock %}
+        </body>
+</html>
+
+ <!-- if in templates folder it will automatically be renderred as a view. -->
+
