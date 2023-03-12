@@ -10,7 +10,11 @@ from flask import make_response
 import sys
 
 app = Flask(__name__)
-app.run(port=4444,debug=True) #if debug true will reload every change
+# app.run(port=4444,debug=True) #if debug true will reload every change
+    # Bind to PORT if defined, otherwise default to 5000.
+port = int(os.environ.get('PORT', 5000))
+app.run(host='0.0.0.0', port=port)
+
 
 # sys.path.insert(1, '')
 # from SPELLING_BEE_HELPER.python_scripts_app import word_finder
