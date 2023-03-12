@@ -6,11 +6,12 @@ from flask import render_template
 from flask import redirect
 from flask import url_for
 from flask import make_response
-from lists.options import DEFAULTS  # grabs list from python file in another folder, notice dot syntax
+# from  lists.options import DEFAULTS  # grabs list from python file in another folder, notice dot syntax
+import sys
 
 app = Flask(__name__)
 
-import sys
+
 # sys.path.insert(1, '')
 # from SPELLING_BEE_HELPER.python_scripts_app import word_finder
 
@@ -181,7 +182,7 @@ def save():
     return response
 
 
-app.run(port=5101,debug=True) #if debug true will reload every change
+app.run(port=5100,debug=True) #if debug true will reload every change
 
 
 
