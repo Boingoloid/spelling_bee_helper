@@ -10,7 +10,7 @@ from flask import make_response
 import sys
 
 app = Flask(__name__)
-
+app.run(port=4444,debug=True) #if debug true will reload every change
 
 # sys.path.insert(1, '')
 # from SPELLING_BEE_HELPER.python_scripts_app import word_finder
@@ -182,7 +182,7 @@ def save():
     return response
 
 
-app.run(port=5100,debug=True) #if debug true will reload every change
+
 
 
 
