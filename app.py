@@ -39,7 +39,7 @@ def get_letters(available_letters,requierd_letter):
     word_found_list = []
     word_found_string = ""
 
-    path = "/static/words_alpha.txt"
+    path = "static/words_alpha.txt"
     # path_export = "/Users/matthewacalin/Desktop/Book1.xlsx"
     word_df = pd.DataFrame()
     word_df = pd.read_csv(path, sep=" ", header=None)
