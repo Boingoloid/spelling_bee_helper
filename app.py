@@ -6,15 +6,18 @@ from flask import render_template
 from flask import redirect
 from flask import url_for
 from flask import make_response
+import os
 # from  lists.options import DEFAULTS  # grabs list from python file in another folder, notice dot syntax
 import sys
 
 app = Flask(__name__)
+app.config['DEBUG'] = True 
+
+port = int(os.environ.get('PORT', 5000))
+if __name__ == '__main__': 
+    app.run(host='0.0.0.0', port=port)
 # app.run(port=4444,debug=True) #if debug true will reload every change
     # Bind to PORT if defined, otherwise default to 5000.
-port = int(os.environ.get('PORT', 5000))
-app.run(host='0.0.0.0', port=port)
-
 
 # sys.path.insert(1, '')
 # from SPELLING_BEE_HELPER.python_scripts_app import word_finder
@@ -140,9 +143,6 @@ def letterReturn():
     # print(type(return_string))
     # return return_string
     #return letters + requierd_letters
-
-
-
 
 
 
