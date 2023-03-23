@@ -39,8 +39,8 @@ def get_letters(available_letters,requierd_letter):
     word_found_list = []
     word_found_string = ""
 
-    path = "/Users/matthewacalin/Desktop/Webapps/word-finder-script/english-words/words_alpha.txt"
-    path_export = "/Users/matthewacalin/Desktop/Book1.xlsx"
+    path = "/static/words_alpha.txt"
+    # path_export = "/Users/matthewacalin/Desktop/Book1.xlsx"
     word_df = pd.DataFrame()
     word_df = pd.read_csv(path, sep=" ", header=None)
     # df = df.drop(columns=df.columns[0], axis=1, inplace=True)
