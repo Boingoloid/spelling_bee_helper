@@ -1,33 +1,38 @@
-{% extends "/base/base.html" %}
- 
-{% block title %} 
-    Form page | {{ super() }}
-{% endblock %}
+{% extends "/base/base.html" %} {% block title %} Form page | {{ super() }} {%
+endblock %} {% block content %}
+<div class="enter-name">
+  <div clsas="grid-100"></div>
+  <div class="grid-100">
+    <h1>Spelling Bee Helper</h1>
+    <form action="{{ url_for('letterReturn') }}" method="POST">
+      <label for="optional-letters">Enter six optional letters:</label>
+      <br />
+      <input
+        type="text"
+        name="letters"
+        class="optional-letters"
+        id="input-optional-letters"
+        minlength="4"
+        maxlength="8"
+        oninput="this.value = this.value.toLowerCase()"
+      />
+      <br /><br />
+      <label for="required-letters">Enter one required letter:</label>
+      <br />
+      <input
+        type="text"
+        name="required-letters"
+        class="required-letters"
+        id="input-required-letters"
+        minlength="1"
+        maxlength="1"
+        oninput="this.value = this.value.toLowerCase()"
+      />
+      <br /><br />
+      <input type="submit" value="Find words!" />
+    </form>
+  </div>
+</div>
+{% endblock %} {% block scripts %} {% endblock %}
 
-{% block content %}
-    <div class="enter-name">
-        <div clsas="grid-100">
-        </div>
-        <div class="grid-100">
-            <h1>Spelling Bee Helper</h1>
-            <form action="{{ url_for('letterReturn') }}" method="POST">
-                <label for="optional-letters">Enter six optional letters:</label>
-                <br>
-                <input type="text" name="letters" class='optional-letters' id='input-optional-letters' minlength="4" maxlength="8">
-                <br><br>
-                <label for="required-letters">Enter one required letter:</label>
-                <br>
-                <input type="text" name="required-letters" class='required-letters' id='input-required-letters' minlength="1" maxlength="1">
-                <br><br>
-                <input type="submit" value="Find words!">
-            </form>
-        </div>
-    </div>
-{% endblock %}
-
-{% block scripts %} 
-
-{% endblock %}
-
- <!-- if in templates folder it will automatically be renderred as a view. -->
-
+<!-- if in templates folder it will automatically be renderred as a view. -->
